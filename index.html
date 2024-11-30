@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster</title>
+   
+    <link 
+    rel="shortcut icon" 
+    href="./images/image copy.png"
+    type="image/x-icon">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+          <img src="./images/image copy.png " alt="task master logo" />
+          <h1>TaskMaster</h1>
+        </div>
+        
+      </header>
+    
+    <div id="auth-section">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="text" id="register-name" placeholder="Name" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Task Management Section -->
+    <div id="task-section" style="display: none;">
+        <h2>TaskMaster</h2>
+        <button id="logout">Logout</button>
+
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <input type="text" id="task-desc" placeholder="Description">
+            <input type="date" id="task-deadline" placeholder="Deadline">
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="task-list">
+            <!-- Tasks will be dynamically displayed here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
